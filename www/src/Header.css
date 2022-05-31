@@ -1,0 +1,8 @@
+#header {
+    position: sticky;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    align-items: end;
+    height: 4rem;
+}

@@ -1,0 +1,20 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Debug Layout */
+  /* box-sizing: border-box;
+  border: 1px dashed white; */
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  background-color: #002b36;
+}
+
+p {
+  color: white;
+}
