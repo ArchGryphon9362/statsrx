@@ -4,7 +4,10 @@ export const Header = () => {
     return (
         <div id='header'>
             <p>F</p>
-            <p>VM Stats</p>
+            <div>
+
+            <h1 id='title'>VM Stats</h1>
+            </div>
         </div>
     )
 }

@@ -12,9 +12,9 @@ html {
 }
 
 body {
-  background-color: #002b36;
+  background-color: #003847;
 }
 
-p {
+p, h1 {
   color: white;
 }

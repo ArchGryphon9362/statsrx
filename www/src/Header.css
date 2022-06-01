@@ -1,8 +1,13 @@
 #header {
+    display: flex;
     position: sticky;
     width: 100%;
     display: inline-block;
-    vertical-align: middle;
-    align-items: end;
+    align-items: center;
     height: 4rem;
+    background-color: #00212b;
+}
+
+#title {
+    float: right;
 }
