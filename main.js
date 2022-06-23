@@ -100,14 +100,14 @@ server.on('request', (req, res) => {
             res.end("Welcome to the incomplete main page!")
             break
         case '/ping':
-            if(req.method != 'GET') {
-                res.writeHead(405)
-                return res.end('405 Method Not Allowed')
-            }
             res.writeHead(200)
             res.end('Pong')
             break
         case '/api/vms/create-vm':
+            if(req.method != 'POST') {
+                res.writeHead(405)
+                return res.end('405 Method Not Allowed')
+            }
             (() => {
                 let vmname = url.searchParams.get('name')
                 let description = url.searchParams.get('description')
@@ -127,6 +127,10 @@ server.on('request', (req, res) => {
             })()
             break
         case '/api/vms/get-info':
+            if(req.method != 'GET') {
+                res.writeHead(405)
+                return res.end('405 Method Not Allowed')
+            }
             (() => {
                 db.serialize(async () => {
                     db.all('SELECT * FROM info', (error, result) => {
@@ -143,6 +147,10 @@ server.on('request', (req, res) => {
             })()
             break
         case '/api/vms/edit-vm':
+            if(req.method != 'PATCH') {
+                res.writeHead(405)
+                return res.end('405 Method Not Allowed')
+            }
             (() => {
                 db.serialize(() => {
                     let id = url.searchParams.get('id')
@@ -170,6 +178,10 @@ server.on('request', (req, res) => {
             })()
             break
         case '/api/vms/delete-vm':
+            if(req.method != 'DELETE') {
+                res.writeHead(405)
+                return res.end('405 Method Not Allowed')
+            }
             (() => {
                 let id = url.searchParams.get('id')
                 if(!id) {
@@ -198,6 +210,10 @@ server.on('request', (req, res) => {
             })()
             break;
         case '/api/storage/insert':
+            if(req.method != 'POST') {
+                res.writeHead(405)
+                return res.end('405 Method Not Allowed')
+            }
             (() => {
                 if(req.method != 'GET') {
                     res.writeHead(405)
@@ -239,12 +255,11 @@ server.on('request', (req, res) => {
             })()
             break
         case '/api/get-latest':
+            if(req.method != 'GET') {
+                res.writeHead(405)
+                return res.end('405 Method Not Allowed')
+            }
             (() => {
-                if(req.method != 'GET') {
-                    res.writeHead(405)
-                    return res.end('405 Method Not Allowed')
-                }
-
                 db.serialize(async () => {
                     db.all('SELECT * FROM latest', (error, result) => {
                         if (error) {
@@ -272,12 +287,11 @@ server.on('request', (req, res) => {
             })()
             break
         case '/api/storage/get-vm':
+            if(req.method != 'GET') {
+                res.writeHead(405)
+                return res.end('405 Method Not Allowed')
+            }
             (() => {
-                if(req.method != 'GET') {
-                    res.writeHead(405)
-                    return res.end('405 Method Not Allowed')
-                }
-
                 let id = url.searchParams.get('id')
                 let time = url.searchParams.get('time')
 
