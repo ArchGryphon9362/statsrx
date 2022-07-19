@@ -8,7 +8,7 @@ const { resolve } = require('path')
 const server = http.createServer()
 server.listen(8080)
 
-// :: Set all methods!
+// :: Telegram notifs
 
 const query = (command, method = 'all') => {
     return new Promise((resolve, reject) => {

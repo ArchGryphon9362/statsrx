@@ -25,7 +25,7 @@ Page for managing VMs
 #### Request
 parameter|description
 -|-
-vmid|Id of the requested VM
+id|Id of the requested VM
 
 View a particular VM's recent storage stats
 
@@ -33,7 +33,7 @@ View a particular VM's recent storage stats
 
 #### Request
 parameter|description
-:-:|:-:
 -|-
+id|Id of the VM to generate a link for
 
-Generates links
+Generates links to insert info
