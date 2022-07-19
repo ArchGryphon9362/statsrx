@@ -7,14 +7,14 @@
   border: 1px dashed white; */
 }
 
-html {
-  min-height: 100vh;
-}
-
 body {
   background-color: #003847;
 }
 
 p, h1 {
   color: white;
+}
+
+html, body, #root, #root-app, #root-app > div {
+  min-height: 100vh;
 }

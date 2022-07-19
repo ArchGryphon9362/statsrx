@@ -1,0 +1,31 @@
+#general-header {
+    display: flex;
+    position: sticky;
+    padding-inline: 3rem;
+    align-items: center;
+    height: 6rem;
+    background-color: #00212b;
+}
+
+#back-button {
+    padding: 0.75rem;
+    border-radius: 1rem;
+    background-color: #003847;
+}
+
+#back-button:hover {
+    cursor: pointer;
+}
+
+#back-button:hover p {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
+
+.header-title {
+    margin-left: auto;
+    margin-right: 0;
+}
